@@ -1,8 +1,10 @@
 package config
 
-const (
-	SMTP_HOST     = "smtp.example.com"
-	SMTP_PORT     = "587"
-	SMTP_USERNAME = "username"
-	SMTP_PASSWORD = "password"
+import "os"
+
+var (
+	SMTP_HOST     = os.Getenv("SMTP_HOST")
+	SMTP_PORT     = os.Getenv("SMTP_PORT")
+	SMTP_USERNAME = os.Getenv("SMTP_USERNAME")
+	SMTP_PASSWORD = os.Getenv("SMTP_PASSWORD")
 )
